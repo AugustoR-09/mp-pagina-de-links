@@ -1,0 +1,107 @@
+/* Padrão */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--lighest: #f1f2eb;
+	--lighest-2: #d8dad3;
+	--darknest: #4a4a48;
+	--primary: #769477;
+	--secondary: #566246;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	color: var(--darknest);
+	background-image: url(Backgound-image.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+/* SECAO SOBRE */
+.sobre {
+	padding: 2rem;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	gap: 1.6rem;
+
+	& .imagem {
+		overflow: hidden;
+		border-radius: 50%;
+		width: 13rem;
+		height: 13rem;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& h1 {
+		color: var(--primary);
+		font-weight: 500;
+
+		& strong {
+			color: var(--secondary);
+		}
+	}
+
+	& p {
+		color: var(--darknest);
+		font-weight: 400;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+}
+
+.links {
+	padding: 2rem;
+	display: flex;
+	flex-flow: column;
+	gap: 1.6rem;
+	align-items: center;
+
+	& div {
+		background-color: var(--secondary);
+		width: 90%;
+		text-align: center;
+		padding: 1.6rem 0;
+		border-radius: 1.6rem;
+		cursor: pointer;
+		border-bottom: solid 3px var(--primary);
+		border-right: solid 3px var(--primary);
+
+		&:hover {
+			background-color: var(--primary);
+			border-color: var(--primary);
+		}
+
+		& a {
+			color: var(--lighest);
+			text-decoration: none;
+			font-size: medium;
+			font-weight: 600;
+		}
+	}
+}
+
+.icones {
+	padding: 2rem;
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	& div a svg {
+		fill: var(--primary);
+		width: 3rem;
+	}
+}
